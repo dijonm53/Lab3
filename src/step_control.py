@@ -39,7 +39,7 @@ def plot_example(plot_axes, plot_canvas, xlabel, ylabel, x_values, y_values, tit
     @param title The title for the graph
     """
     
-    ## DO STEP RESPONSE HERE
+    ## PUT THE TEST CODE HERE
 
     # Drawing the plot for both outputs   
     plot_axes.plot(x_values, y_values, color='orange', linestyle='dashed')
