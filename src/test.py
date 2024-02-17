@@ -20,6 +20,8 @@ if __name__ == "__main__":
     x_values = []
     y_values = []
 
+
+    ## BELOW IS WHERE SHIT HITS THE DRAIN :(
     # Converts the printed statements of the output to float and puts them in lists 
     while end_cond <= 1990:
         try:
