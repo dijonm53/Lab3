@@ -67,7 +67,7 @@ class encoder:
             
             # Implement delay to run the code smoothly
             # Otherwise, there will be some lag when printing the statements
-            time.sleep(0.05)
+#             time.sleep(0.05)
             
     def zero(self):
         """!
