@@ -43,33 +43,25 @@ class MotorDriver:
                cycle of the voltage sent to the motor 
         """
         # creating a variable to run a while loop to run the motor
-        signal = True
         try:
             # check if level is negative and greater than -100
             # this is to check the sign of level, but also that
             # the duty cycle does not exceed its bounds
-            if level < 0 and level >= -100:
+            if level < 0 :
                 self.ch1.pulse_width_percent(0)
                 # bias signal channel 2
                 self.ch2.pulse_width_percent(abs(level))
             # otherwise if positive, check if level exceeds 100  
-            elif level >= 0 and level <= 100:
+            elif level >= 0 :
                 self.ch1.pulse_width_percent(abs(level))
                 self.ch2.pulse_width_percent(0)
-            else:
-            # error case handling if value is out of bounds
-                print('Out of Range')
-            # exit out of loop by setting signal to false
-                signal = False
+                
         # When ctrl+c/ program stops, keyboard interrupt handling
         except KeyboardInterrupt:
-            print('All done')
             self.ch1.pulse_width_percent(0)
             self.ch2.pulse_width_percent(0)
-            signal = False
         # When non-numeral is entered error handling
         except TypeError:
-            signal = False
             print('Set level to signed int')
             
 ## The following code, if not commented out and all run in a main file, would define the parameters
