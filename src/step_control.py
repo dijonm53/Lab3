@@ -75,11 +75,9 @@ def plot_example(plot_axes, plot_canvas, xlabel, ylabel, ser, x_values, y_values
             y_values.append(y_value)
             
         except ValueError:
-            print('error')
             continue
         
         except IndexError:
-            print('index')
             continue
 
     # Drawing the plot when Run is hit
